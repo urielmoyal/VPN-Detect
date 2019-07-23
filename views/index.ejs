@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang='en' class=''>
+<title>Geo-Spoofing</title>
+<meta name="description" content="Check Whatever You're Using VPN">
+<meta name="viewport" content="width=device-width, initial-scale=0.7">
+<meta property="og:title" content="Geo-Spoofing - Check Whatever You're Using VPN">
+<meta property="og:url" content="http://geo-spoofing.tk">
+<meta property="og:description" content="geo-spoofing.tk">
+<meta property="og:image" content="Geo-Spoof.png">
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="he_il" />
+<head>
+<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="success.css">
+</head>
+<div id="localTime" style="display: none;"><%= time %></div>
+<div id="TimeZone" style="display: none;"><%= time_zone %></div>
+<body onload="compareLocalTime(<%= result %>)">
+<body>                 
+<h1 class="logo">
+  <span class="word1">Geo</span><br>
+  <span class="word2">Spoofing</span>
+</h1>
+<div class="graph-container">
+<svg id="my-svg" width="250px" height="250px"
+</svg>
+<span class="percent-text" style="color:#007ac1">0%</span>
+</div>
+<br><br>
+<div class="toast__container">
+<div class="toast__cell">
+<div class="toast toast--white">
+  <div class="info">
+    <center><i><p style="display:inline" id="using"></p></i><br><br><p style="display:inline" class="toast__type">Your iP: <p style="display:inline"><%= ipClient %><p class="toast toast__type2"></p></p></p></center>
+    <p style="display:inline" class="toast__message"><u>Sys Date</u>: <p style="display:inline" class="toast__message" id="date"></p></p>
+    <p style="display:inline" class="toast__message"><u>iP Country</u>: <p style="display:inline" class="toast__message"><b><%= country %></b></p>&nbsp;<p style="display:inline" class="toast__message"><img class='country__flag' src="<%= flag %>" /></p></p>
+    <p style="display:inline" class="toast__message"><u>Time Zone</u>: <p style="display:inline" class="toast__message"><b><%= time_zone %></b></p>
+  </div>
+</div>
+
+<div class="toast toast--<%= test1 %> add-margin">
+  <div class="toast__icon">
+<svg version="1.1" class="toast__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 301.691 301.691" style="enable-background:new 0 0 301.691 301.691;" xml:space="preserve">
+<g>
+	<polygon points="119.151,0 129.6,218.406 172.06,218.406 182.54,0  "></polygon>
+	<rect x="130.563" y="261.168" width="40.525" height="40.523"></rect>
+</g>
+    </svg>
+  </div>
+  <div class="toast__content">
+    <p style="display:inline" class="toast__type">Black Box Proxy Block | <%= check1 %> <p style="display:inline"><%= percent1 %></p></p>
+    <p class="toast__message">Determine whether IP belongs to a hosting or VPN organization.</p>
+  </div>
+  <div class="toast__close">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.642 15.642" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 15.642 15.642">
+  <path fill-rule="evenodd" d="M8.882,7.821l6.541-6.541c0.293-0.293,0.293-0.768,0-1.061  c-0.293-0.293-0.768-0.293-1.061,0L7.821,6.76L1.28,0.22c-0.293-0.293-0.768-0.293-1.061,0c-0.293,0.293-0.293,0.768,0,1.061  l6.541,6.541L0.22,14.362c-0.293,0.293-0.293,0.768,0,1.061c0.147,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22l6.541-6.541  l6.541,6.541c0.147,0.146,0.338,0.22,0.53,0.22c0.192,0,0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L8.882,7.821z"></path>
+</svg>
+  </div>
+</div>
+
+<div class="toast toast--<%= test2 %> add-margin">
+  <div class="toast__icon">
+<svg version="1.1" class="toast__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 301.691 301.691" style="enable-background:new 0 0 301.691 301.691;" xml:space="preserve">
+<g>
+	<polygon points="119.151,0 129.6,218.406 172.06,218.406 182.54,0  "></polygon>
+	<rect x="130.563" y="261.168" width="40.525" height="40.523"></rect>
+</g>
+    </svg>
+  </div>
+  <div class="toast__content">
+    <p style="display:inline" class="toast__type">'Host' Field | <%= check2 %> <p style="display:inline"><%= percent2 %></p></p>
+    <p class="toast__message">Check 'Host' IP header field is belongs to VPN or not.</p>
+  </div>
+  <div class="toast__close">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.642 15.642" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 15.642 15.642">
+  <path fill-rule="evenodd" d="M8.882,7.821l6.541-6.541c0.293-0.293,0.293-0.768,0-1.061  c-0.293-0.293-0.768-0.293-1.061,0L7.821,6.76L1.28,0.22c-0.293-0.293-0.768-0.293-1.061,0c-0.293,0.293-0.293,0.768,0,1.061  l6.541,6.541L0.22,14.362c-0.293,0.293-0.293,0.768,0,1.061c0.147,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22l6.541-6.541  l6.541,6.541c0.147,0.146,0.338,0.22,0.53,0.22c0.192,0,0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L8.882,7.821z"></path>
+</svg>
+  </div>
+</div>
+
+<div class="toast toast--<%= test3 %> add-margin">
+  <div class="toast__icon">
+<svg version="1.1" class="toast__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 301.691 301.691" style="enable-background:new 0 0 301.691 301.691;" xml:space="preserve">
+<g>
+	<polygon points="119.151,0 129.6,218.406 172.06,218.406 182.54,0  "></polygon>
+	<rect x="130.563" y="261.168" width="40.525" height="40.523"></rect>
+</g>
+    </svg>
+  </div>
+  <div class="toast__content">
+    <p style="display:inline" class="toast__type">Accepted Languages | <%= check3 %> <p style="display:inline"><%= percent3 %></p></p>
+    <p class="toast__message">Check if client accepted languages is equal to his country languages.</p>
+  </div>
+  <div class="toast__close">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.642 15.642" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 15.642 15.642">
+  <path fill-rule="evenodd" d="M8.882,7.821l6.541-6.541c0.293-0.293,0.293-0.768,0-1.061  c-0.293-0.293-0.768-0.293-1.061,0L7.821,6.76L1.28,0.22c-0.293-0.293-0.768-0.293-1.061,0c-0.293,0.293-0.293,0.768,0,1.061  l6.541,6.541L0.22,14.362c-0.293,0.293-0.293,0.768,0,1.061c0.147,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22l6.541-6.541  l6.541,6.541c0.147,0.146,0.338,0.22,0.53,0.22c0.192,0,0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L8.882,7.821z"></path>
+</svg>
+  </div>
+</div>
+
+<div id="test4" class="toast add-margin">
+  <div class="toast__icon">
+<svg version="1.1" class="toast__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 301.691 301.691" style="enable-background:new 0 0 301.691 301.691;" xml:space="preserve">
+<g>
+	<polygon points="119.151,0 129.6,218.406 172.06,218.406 182.54,0  "></polygon>
+	<rect x="130.563" y="261.168" width="40.525" height="40.523"></rect>
+</g>
+    </svg>
+  </div>
+  <div class="toast__content">
+    <p style="display:inline" class="toast__type">Date Time | <p class="toast__type" id="check4" style="display:inline"></p> <p id="percent4" style="display:inline"></p></p>
+    <p class="toast__message">Compare client location time with his system time.</p>
+  </div>
+  <div class="toast__close">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.642 15.642" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 15.642 15.642">
+  <path fill-rule="evenodd" d="M8.882,7.821l6.541-6.541c0.293-0.293,0.293-0.768,0-1.061  c-0.293-0.293-0.768-0.293-1.061,0L7.821,6.76L1.28,0.22c-0.293-0.293-0.768-0.293-1.061,0c-0.293,0.293-0.293,0.768,0,1.061  l6.541,6.541L0.22,14.362c-0.293,0.293-0.293,0.768,0,1.061c0.147,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22l6.541-6.541  l6.541,6.541c0.147,0.146,0.338,0.22,0.53,0.22c0.192,0,0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L8.882,7.821z"></path>
+</svg>
+  </div>
+</div>
+
+<div id="test5" class="toast add-margin">
+  <div class="toast__icon">
+<svg version="1.1" class="toast__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 301.691 301.691" style="enable-background:new 0 0 301.691 301.691;" xml:space="preserve">
+<g>
+	<polygon points="119.151,0 129.6,218.406 172.06,218.406 182.54,0  "></polygon>
+	<rect x="130.563" y="261.168" width="40.525" height="40.523"></rect>
+</g>
+    </svg>
+  </div>
+  <div class="toast__content">
+    <p style="display:inline" class="toast__type">Time  Zone | <p class="toast__type" id="check5" style="display:inline"></p> <p id="percent5" style="display:inline"></p></p>
+    <p class="toast__message">Compare client time zone with his system time zone.</p>
+  </div>
+  <div class="toast__close">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.642 15.642" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 15.642 15.642">
+  <path fill-rule="evenodd" d="M8.882,7.821l6.541-6.541c0.293-0.293,0.293-0.768,0-1.061  c-0.293-0.293-0.768-0.293-1.061,0L7.821,6.76L1.28,0.22c-0.293-0.293-0.768-0.293-1.061,0c-0.293,0.293-0.293,0.768,0,1.061  l6.541,6.541L0.22,14.362c-0.293,0.293-0.293,0.768,0,1.061c0.147,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22l6.541-6.541  l6.541,6.541c0.147,0.146,0.338,0.22,0.53,0.22c0.192,0,0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L8.882,7.821z"></path>
+</svg>
+  </div>
+</div>
+</div>
+</div>
+
+<br>
+<p>powerG-Team Copyright©</p>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js'></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
