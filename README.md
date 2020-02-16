@@ -36,10 +36,6 @@ node server.js
 
 
 ### Screenshots
-> Introduction
-
-![Introduction](Images/1.jpg)
-
 > Demonstration
 
 ![Demonstration](Images/8.jpg)
