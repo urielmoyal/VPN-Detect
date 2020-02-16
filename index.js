@@ -1,17 +1,16 @@
-var mySvg = document.querySelector('#my-svg');
-var snap = Snap(mySvg);
-var w = mySvg.width.baseVal.value,h = mySvg.height.baseVal.value,cx = w / 2,cy = h / 2;
-
-var radius = 100;
-var perimeter = 2 * Math.PI * radius;
-var color = '#007ac1';
-
-var circle = snap.circle(cx, cy, radius);
-var text = document.querySelector('.percent-text');
-text.style.color = color;
 
 function updateGraph(perc) {
+  var mySvg = document.querySelector('#my-svg');
+  var snap = Snap(mySvg);
+  var w = mySvg.width.baseVal.value,h = mySvg.height.baseVal.value,cx = w / 2,cy = h / 2;
 
+  var radius = 100;
+  var perimeter = 2 * Math.PI * radius;
+  var color = '#007ac1';
+
+  var circle = snap.circle(cx, cy, radius);
+  var text = document.querySelector('.percent-text');
+  text.style.color = color;
   if(document.getElementById("check4").innerHTML == 'Checking Error' && document.getElementById("check5").innerHTML == 'Checking Error'){
   color = '#e6c300';
   text.style.color = '#e6c300';

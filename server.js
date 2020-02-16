@@ -32,13 +32,13 @@ app.get('/', function(req, res) {
     fullCountry = CountryLanguage.getCountry(country).name;
     console.log("Client Connected..");
     console.log(`Client IP: ${ipClient}`);
-    console.log("----------------BlackBoxProxyBlock--------------------");
-    BlackBoxProxyBlock(res);
+    console.log("----------------BlackListIP--------------------");
+    BlackListIP(res);
 })
 
 let port = process.env.PORT;;
 if (port == null || port == "") {
-    port = 8000;
+    port = 3000;
   }
 
 app.listen(port);
@@ -46,16 +46,17 @@ console.log("-------------------");
 app.use(express.static(__dirname + '/'));
 console.log("Server is running..");
 
-function BlackBoxProxyBlock(res)
+function BlackListIP(res)
 {
-  request(`http://proxy.mind-media.com/block/proxycheck.php?ip=${ipClient}`,function(error,response,body){
-    if(error || body == 'X'){
-      console.log('BlackBoxProxyBlock error:', body);
+  request(`https://ip.teoh.io/api/vpn/${ipClient}`,function(error,response,body){
+    var bodyData1 = JSON.parse(body);
+    if(error || bodyData1['message'] == 'IP Address is invalid.'){
+      console.log('BlackListIP error:', bodyData1['message']);
       test1 = 'yellow';
       check1 = 'Checking Error';
     }
     else{
-      if(body == 'N'){
+      if(bodyData1['risk'] != 'high'){
           test1 = 'green';
           check1 = 'Succeed';
         }
@@ -65,7 +66,7 @@ function BlackBoxProxyBlock(res)
           result += 0.3;
           percent1 = ' - 30%'
         }
-        console.log('BlackBoxProxyBlock result is:', body);
+        console.log('BlackListIP result is:', bodyData1['vpn_or_proxy']);
       }
     console.log('1. Result is:', result);
     console.log("--------------------HostChecker-----------------------");

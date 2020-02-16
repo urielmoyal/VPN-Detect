@@ -10,20 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sceTeam/securityProject.git"
+    "url": "git+https://github.com/DavidSaal/Geo-Spoofing.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sceTeam/securityProject/issues"
+    "url": "https://github.com/DavidSaal/Geo-Spoofing/issues"
   },
-  "homepage": "https://github.com/sceTeam/securityProject#readme",
+  "homepage": "https://github.com/DavidSaal/Geo-Spoofing#readme",
   "dependencies": {
     "child_process": "^1.0.2",
     "country-language": "^0.1.7",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "geoip-lite-country-only": "^1.0.1",
+    "geoip-lite": "^1.3.7",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "sys": "0.0.1",
