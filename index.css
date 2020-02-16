@@ -1,0 +1,35 @@
+body {
+  background: #282828;
+  text-align: center;
+}
+
+.graph-container {
+  position: relative;
+}
+.graph-container .percent-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-family: "Pathway Gothic One", Arial;
+}
+
+.logo {
+  font: 110px 'Arial', Sans-serif;
+  color: #282828;
+  letter-spacing: 0px;
+}
+
+/* stuff for 1st word */
+.logo .word1 {
+  color: #dc006c;
+  margin-right: -15px;
+  display: inline-block;/* required for transform */
+  z-index: 10;/* stack 1st word on top */
+}
+
+/* stuff for 2nd word */
+.logo .word2 {
+  z-index: 0;/* stack 2nd word below */
+}
